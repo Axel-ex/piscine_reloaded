@@ -8,7 +8,6 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-
 $(NAME): ${OBJ} 
 	${CC} ${CFLAGS} ${SRC} -o ${NAME}
 

@@ -10,9 +10,9 @@ RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
 %.c: %.o
-	${CC} ${CFLAGS} -I includes -c $< -o $@
+	${CC} ${CFLAGS} -I includes -c $< -o ${<:.c=.o}
 
-$(NAME): ${OBJS} 
+$(NAME): ${OBJS}
 	ar rcs ${NAME} ${OBJS}
 
 all : ${NAME}
